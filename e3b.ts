@@ -1,6 +1,7 @@
 import {readFileSync} from 'fs';
 
-const f = readFileSync('./e3.txt', 'utf-8');
+const f = readFileSync('./e3-real.txt', 'utf-8');
+console.log(f)
 const a = f.split('\n').map(l => l.split(''))
 const m = a.length
 const n = a[0].length
@@ -34,9 +35,25 @@ for (let i = 0; i < m; i++) {
         if ((a[i][j]) === '*') {
             const digits = getDigitsAround(a, i, j)
             if (digits.length < 2) continue
+            let visited = {}
+            let nums = []
             for (let k = 0 ; k < digits.length; k++) {
-
+                let [ii, jj] = digits[k]
+                if (`${ii},${jj}` in visited) continue
+                let firstDigit = jj - 1
+                while (firstDigit >= 0 && isNumber(a[ii][firstDigit])) firstDigit--
+                let currDigit = firstDigit + 1
+                let num = 0
+                while (currDigit < n && isNumber(a[ii][currDigit])) {
+                    num *= 10
+                    num += parseInt(a[ii][currDigit])
+                    visited[`${ii},${currDigit}`] = 1
+                    currDigit++
+                }
+                nums.push(num)
             }
+            if (nums.length !== 2) continue
+            sum += nums[0] * nums[1]
         }
     }
 }
