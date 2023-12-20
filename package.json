@@ -12,6 +12,12 @@
   "scripts": {
     "e17": "tsx e1-19/e17.ts",
     "e18": "tsx e1-19/e18.ts",
-    "e19": "tsx e1-19/e19.ts"
+    "e19": "tsx e1-19/e19.ts",
+    "e20": "tsx e20.ts",
+    "e21": "tsx e21.ts",
+    "e22": "tsx e22.ts",
+    "e23": "tsx e23.ts",
+    "e24": "tsx e24.ts",
+    "e25": "tsx e25.ts"
   }
 }
