@@ -10,8 +10,8 @@
     "tsx": "^4.6.2"
   },
   "scripts": {
-    "e17": "tsx e17.ts",
-    "e18": "tsx e18.ts",
-    "e19": "tsx e19.ts"
+    "e17": "tsx e1-19/e17.ts",
+    "e18": "tsx e1-19/e18.ts",
+    "e19": "tsx e1-19/e19.ts"
   }
 }
