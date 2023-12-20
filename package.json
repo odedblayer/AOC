@@ -1,0 +1,17 @@
+{
+  "name": "aoc",
+  "version": "1.0.0",
+  "devDependencies": {
+    "@types/node": "latest",
+    "typescript": "latest"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "tsx": "^4.6.2"
+  },
+  "scripts": {
+    "e17": "tsx e17.ts",
+    "e18": "tsx e18.ts",
+    "e19": "tsx e19.ts"
+  }
+}
